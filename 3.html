@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <style>
+        body {
+            background-color: #808080;
+            color: aliceblue;
+            font-family: "BIZ UDゴシック";
+
+        }
+
+        .example2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .example2 label {
+            display: block;
+            width: 150px;
+            background: #cecece;
+            color: #000;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .example2 input[type="checkbox"] {
+            display: none;
+        }
+
+        .example2 input[type="checkbox"]:checked+label {
+            background: rgb(56, 119, 137);
+            color: #FFF;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: 000000;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgb(56, 119, 137)0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>チェックリスト</h1><br><br><br>
+
+    <div id="group1">
+        <p>機器の充電残量（電源を入れ、しばらく待って確認してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="1" name="example2"><label for="1">カメラ</label>
+            <input type="checkbox" id="2" name="example2"><label for="2">マイク送信機１</label>
+            <input type="checkbox" id="3" name="example2"><label for="3">マイク送信機２</label>
+            <input type="checkbox" id="4" name="example2"><label for="4">マイク受信機</label>
+        </div>
+        <p id="message1">　</p>
+        <p id="result1" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group2">
+        <p>機器の容量残量（マイクの容量は専用ソフトで確認が必要です）</p>
+        <br>
+
+        <div class="example2">
+            <input type="checkbox" id="5" name="example3"><label for="5">カメラ</label>
+            <input type="checkbox" id="6" name="example3"><label for="6">マイク送信機１</label>
+            <input type="checkbox" id="7" name="example4"><label for="7">マイク送信機２</label>
+        </div>
+        <p id="message2">　</p>
+        <p id="result2" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group3">
+        <p>TV音量・光量（メインモニターの音量に注意してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="8" name="example4"><label for="8">メインモニター</label>
+            <input type="checkbox" id="9" name="example4"><label for="9">返しのモニター</label>
+            <input type="checkbox" id="10" name="example2"><label for="10">console</label>
+        </div>
+        <p id="message3">　</p>
+        <p id="result3" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+
+    <div id="group4">
+        <p>カーテン・照明（照明のコンセントに注意してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="13" name="example2"><label for="13">カーテン</label>
+            <input type="checkbox" id="11" name="example2"><label for="11">照明１</label>
+            <input type="checkbox" id="12" name="example2"><label for="12">照明２</label>
+        </div>
+        <p id="message4">　</p>
+        <p id="result4" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group5">
+        <p>画角・入り込み・映り込み（画面上部の頭、下手ノブに注意してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="14" name="example2"><label for="14">確認</label>
+        </div>
+        <p id="message5">　</p>
+        <p id="result5" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group6">
+        <p>光量・ピント（ゼブラの表示と合わせて設定してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="15" name="example2"><label for="15">光量</label>
+            <input type="checkbox" id="16" name="example2"><label for="16">ピント</label>
+        </div>
+        <p id="message6">　</p>
+        <p id="result6" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group7">
+        <p>音声メーター（接続部の増し締めを行ってください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="17" name="example2"><label for="17">マイク１</label>
+            <input type="checkbox" id="18" name="example2"><label for="18">マイク２</label>
+            <input type="checkbox" id="19" name="example2"><label for="19">ハンドマイク</label>
+            <input type="checkbox" id="20" name="example2"><label for="20">ポン出し器</label>
+        </div>
+        <p id="message7">　</p>
+        <p id="result7" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+
+    <div id="group8">
+        <p>事前映像の再生（講座開始3分前の時間を入力してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="21" name="example2"><label for="21">時間設定</label>
+            <input type="checkbox" id="22" name="example2"><label for="22">音量の確認</label>
+        </div>
+        <p id="message8">　</p>
+        <p id="result8" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group9">
+        <p>スイッチャー（カメラ４、音声４になっているか確認してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="23" name="example2"><label for="23">カメラ</label>
+            <input type="checkbox" id="24" name="example2"><label for="24">音声</label>
+        </div>
+        <p id="message9">　</p>
+        <p id="result9" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group10">
+        <p>REC（タリーランプを確認してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="25" name="example2"><label for="25">REC</label>
+            <input type="checkbox" id="26" name="example2"><label for="26">タリーランプ</label>
+        </div>
+        <p id="message10">　</p>
+        <p id="result10" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+
+    <div id="group11">
+        <p>ZOOMマイクテスト（console上のメーターも併せて確認してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="27" name="example2"><label for="27">マイク1</label>
+            <input type="checkbox" id="28" name="example2"><label for="28">マイク２</label>
+            <input type="checkbox" id="29" name="example2"><label for="29">ハンドマイク</label>
+        </div>
+        <p id="message11">　</p>
+        <p id="result11" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group12">
+        <p>異音防止・身だしなみ（マイクに触れる髪に注意してください）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="30" name="example2"><label for="30">マイクの位置</label>
+            <input type="checkbox" id="31" name="example2"><label for="31">除湿器等</label>
+            <input type="checkbox" id="32" name="example2"><label for="32">髪・ネクタイ</label>
+        </div>
+        <p id="message12">　</p>
+        <p id="result12" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+    <br>
+
+    <div id="group13">
+        <p>本番2分前・再確認（指差し確認）</p>
+        <br>
+        <div class="example2">
+            <input type="checkbox" id="33" name="example2"><label for="33">事前動画の終了</label>
+            <input type="checkbox" id="34" name="example2"><label for="34">音声</label>
+            <input type="checkbox" id="35" name="example2"><label for="35">console</label>
+            <input type="checkbox" id="36" name="example2"><label for="36">REC</label>
+        </div>
+        <p id="message13">　</p>
+        <p id="result13" class="hidden" style="color: #ffffff; font-weight: bold;">　　　　　OK</p>
+    </div>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script>
+        document.querySelectorAll('.example2').forEach((group, index) => {
+            group.addEventListener('change', () => {
+                const checkboxes = group.querySelectorAll('input[type="checkbox"]');
+                const message = document.getElementById('message' + (index + 1));
+                const result = document.getElementById('result' + (index + 1));
+                const allChecked = Array.from(checkboxes).every(checkbox => checkbox.checked);
+                if (allChecked) {
+                    message.classList.add('hidden');
+                    result.classList.remove('hidden');
+                } else {
+                    message.classList.remove('hidden');
+                    result.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
